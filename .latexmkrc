@@ -1,6 +1,6 @@
 # Default list of files to be processed.
 # @default_files = ("main", "second", "third", "etc.")
-@default_files = (bridge, "complex", "fhtw-light", "fhtw-random-light", "fhtw-random", "fhtw-simple", "fhtw", "noir-bridge-color", "noir-bridge", "noir", "simple", "tutorial");
+@default_files = ("bridge", "complex", "fhtw-light", "fhtw-random-light", "fhtw-random", "fhtw-simple", "fhtw", "noir-bridge-color", "noir-bridge", "noir", "simple", "tutorial");
 
 # The first parameter is the name of one of the system's environment variables for search paths.
 # The remaining parameters are values that should be in the variable.
