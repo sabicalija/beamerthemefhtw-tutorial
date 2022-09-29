@@ -1,0 +1,138 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme[style=noir]{fhtw}
+\usepackage{preamble}
+
+\title[Theme User Guide]{Beamer Theme \glsentrytext{uastw}}
+\subtitle{User Guide}
+\author{Alija Sabic, \glsentrytext{msc}}
+\mail{sabic.alija@gmail.com}
+\institute{Department Electronic Engineering}
+
+\begin{document}
+
+\begin{frame}[plain]
+    \titlepage
+    % \glsadd{uastw}
+    % \glsadd{msc}
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+    \par This tutorial describes how to use the \LaTeX~beamer theme \texttt{fhtw} \cite{sabic:github:beamerthemefhtw} of the \gls{uastw}.
+\end{frame}
+
+
+\section{Configuration}
+\subsection{Styles}
+
+\foreach \style in {bridge,complex,fhtw-light,fhtw-random-light,fhtw-random,fhtw-simple,fhtw,noir-bridge-color,noir-bridge,noir,simple}{
+        \subsubsection{\style}
+
+        \begin{frame}
+            \begin{listing}[H]
+                \inputsource[firstline=2,lastline=2]{latex}{\style.tex}
+                \caption{Using style \style}
+                % \label{lst:title:noir}
+            \end{listing}
+
+            \begin{figure}
+                \setlength{\fboxsep}{0pt}
+                \fbox{\includegraphics[width=0.7\textwidth]{\style}}
+                \caption{\style~ style title page.}
+                % \label{fig:title:noir}
+            \end{figure}
+
+        \end{frame}
+    }
+
+% \subsubsection{noir}
+
+% \begin{frame}
+%     \begin{listing}[H]
+%         \inputsource[firstline=2,lastline=2]{latex}{noir.tex}
+%         \caption{Using style noir}
+%         \label{lst:title:noir}
+%     \end{listing}
+
+%     \begin{figure}
+%         \includegraphics[width=0.7\textwidth]{noir}
+%         \caption{noir style title page.}
+%         \label{fig:title:noir}
+%     \end{figure}
+
+% \end{frame}
+
+% \subsubsection{noir-bridge}
+
+% \begin{frame}
+%     \begin{listing}[H]
+%         \inputsource[firstline=2,lastline=2]{latex}{noir-bridge.tex}
+%         \caption{Using style noir-bridge}
+%         \label{lst:title:noir-bridge}
+%     \end{listing}
+
+%     \begin{figure}
+%         \includegraphics[width=0.7\textwidth]{noir-bridge}
+%         \caption{noir-bridge style title page.}
+%         \label{fig:title:noir-bridge}
+%     \end{figure}
+
+% \end{frame}
+
+% \subsubsection{noir-bridge-color}
+
+% \begin{frame}
+%     \begin{listing}[H]
+%         \inputsource[firstline=2,lastline=2]{latex}{noir-bridge-color.tex}
+%         \caption{Using style noir-bridge-color}
+%         \label{lst:title:noir-bridge-color}
+%     \end{listing}
+
+%     \begin{figure}
+%         \includegraphics[width=0.7\textwidth]{noir-bridge-color}
+%         \caption{noir-bridge-color style title page.}
+%         \label{fig:title:noir-bridge-color}
+%     \end{figure}
+
+% \end{frame}
+
+\section{Assets}
+\subsection{Figures}
+
+\subsection{Tables}
+\subsubsection{Basic}
+\begin{frame}
+    \begin{table}
+        \begin{tblr}{width=\linewidth,colspec={XX[3]},hlines,vlines,row{2}={font=\tt}}
+            Option & Value                                                                                                         \\
+            style  & fhtw, fhtw-light, fhtw-random, fhtw-random-simple, fhtw-complex, noir, noir-bridge, noir-bridge-color, simple \\
+        \end{tblr}
+        \caption{Simple table example.}
+        \label{tab:example:simple}
+    \end{table}
+\end{frame}
+
+\subsubsection{Advanced}
+\begin{frame}
+    \begin{table}
+        \begin{tblr}{width=\linewidth,colspec={XXX},hlines,vlines,row{1}={bg=tw-blue,fg=white}}
+            Math  & Is  & Fun \\
+            Proof & 'em & all \\
+        \end{tblr}
+        \caption{Advanced table example.}
+        \label{tab:example:advanced}
+    \end{table}
+\end{frame}
+
+\appendix
+
+\begin{frame}[allowframebreaks]{Acronyms}
+    \printglossary[type=\acronymtype, nonumberlist]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+    \bibliography{references}
+\end{frame}
+
+\end{document}
